@@ -1,0 +1,15 @@
+//MACROS
+#define POT A0
+#define BAUDRATE 9600
+#define TIME 100
+void setup()
+{
+    Serial.begin(BAUDRATE);
+}
+
+void loop()
+{
+    int16_t sensor=analogRead(POT);
+    Serial.println(sensor);
+    delay(TIME);
+}
